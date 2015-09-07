@@ -18,6 +18,12 @@ public class HomeContainerFragment extends BaseContainerFragment {
     private boolean mIsViewInited;
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.e("test", "tab 1 oncreateview");
         return inflater.inflate(R.layout.container_fragment, null);

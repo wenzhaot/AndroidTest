@@ -1,6 +1,5 @@
 package com.wenzhaot.tabdemo;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
 import android.util.Log;
@@ -10,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class FragmentTabs extends FragmentActivity {
+public class FragmentTabs extends BaseFragmentActivity {
 
     private FragmentTabHost mTabHost;
     private LayoutInflater layoutInflater;
@@ -19,7 +18,6 @@ public class FragmentTabs extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_tabs);
-
         initView();
     }
 
@@ -30,9 +28,9 @@ public class FragmentTabs extends FragmentActivity {
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
         mTabHost.getTabWidget().setDividerDrawable(R.color.tab_background);
 
-        addTabSpec(R.layout.tab_item_view, "home", "首页", R.drawable.tab_home_btn, HomeContainerFragment.class);
+        addTabSpec(R.layout.tab_item_view, "home", "首页", R.drawable.tab_home_btn, HomeFragment.class);
         addTabSpec(R.layout.tab_item_center_view, "Test", null, R.drawable.tab_home_btn, null);
-        addTabSpec(R.layout.tab_item_view, "msg", "消息", R.drawable.tab_home_btn, HomeContainerFragment.class);
+        addTabSpec(R.layout.tab_item_view, "msg", "消息", R.drawable.tab_home_btn, SettingFragment.class);
 
         mTabHost.getTabWidget().getChildTabViewAt(1).setOnClickListener(new View.OnClickListener() {
             @Override

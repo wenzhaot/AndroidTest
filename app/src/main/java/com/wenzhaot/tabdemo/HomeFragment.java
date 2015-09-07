@@ -18,6 +18,10 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,5 +30,10 @@ public class HomeFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        BaseFragmentActivity activity = (BaseFragmentActivity)getActivity();
+        activity.setTitle("Home");
+    }
 }

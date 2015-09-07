@@ -8,6 +8,7 @@
         android:id="@+id/realtabcontent"
         android:layout_width="fill_parent"
         android:layout_height="0dip"
+        android:background="@color/realcontent_background"
         android:layout_weight="1" />
 
     <android.support.v4.app.FragmentTabHost
@@ -19,8 +20,7 @@
         <FrameLayout
             android:id="@android:id/tabcontent"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0" />
+            android:layout_height="0dp" />
     </android.support.v4.app.FragmentTabHost>
 
 </LinearLayout>

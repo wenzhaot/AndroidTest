@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="tab_background">#ffffff</color>
+    <color name="nav_background">#ffffff</color>
+    <color name="realcontent_background">#a3a3a3</color>
 </resources>
